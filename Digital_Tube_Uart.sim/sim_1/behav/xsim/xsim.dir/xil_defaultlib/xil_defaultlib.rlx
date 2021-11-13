@@ -1,0 +1,13 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sim_1/new/Uart_Data_1_tb.v,1635596821,verilog,,,,Uart_Data_1_tb,,,,,,,,
+F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KEY_1.v,1635598193,verilog,,F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v,,filter,,,,,,,,
+F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v,1635584498,verilog,,F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/Uart_led_show.v,,KW4_change,,,,,,,,
+F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/Uart_led_show.v,1635599362,verilog,,F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/decoder_3_8.v,,Uart_led_show,,,,,,,,
+F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/decoder_3_8.v,1632649845,verilog,,F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_rx.v,,decoder_3_8,,,,,,,,
+F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_rx.v,1633273422,verilog,,F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_top.v,,uart_rx,,,,,,,,
+F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_top.v,1635590640,verilog,,F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_tx.v,,uart_top,,,,,,,,
+F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_tx.v,1633691259,verilog,,F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sim_1/new/Uart_Data_1_tb.v,,uart_tx,,,,,,,,

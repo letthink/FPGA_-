@@ -1,0 +1,617 @@
+
+*** Running vivado
+    with args -log uart_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_top.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source uart_top.tcl -notrace
+Command: synth_design -top uart_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22116 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 853.828 ; gain = 234.480
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'uart_top' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_top.v:23]
+	Parameter UART_BPS bound to: 115200 - type: integer 
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_tx.v:1]
+	Parameter SYS_CLK_FRE bound to: 100000000 - type: integer 
+	Parameter BPS bound to: 115200 - type: integer 
+	Parameter BPS_CNT bound to: 868 - type: integer 
+INFO: [Synth 8-226] default block is never used [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_tx.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (1#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_tx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_rx.v:1]
+	Parameter BPS bound to: 115200 - type: integer 
+	Parameter SYS_CLK_FRE bound to: 100000000 - type: integer 
+	Parameter BPS_CNT bound to: 868 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (2#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_rx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'KW4_change' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:23]
+	Parameter T_1ms bound to: 99999 - type: integer 
+	Parameter T_500ms bound to: 49999999 - type: integer 
+	Parameter T_1s bound to: 99999999 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'decoder_3_8' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/decoder_3_8.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_3_8' (3#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/decoder_3_8.v:2]
+INFO: [Synth 8-226] default block is never used [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:117]
+INFO: [Synth 8-226] default block is never used [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:139]
+WARNING: [Synth 8-6014] Unused sequential element cnt_1s_reg was removed.  [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:73]
+WARNING: [Synth 8-6014] Unused sequential element Two_count_reg was removed.  [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:85]
+WARNING: [Synth 8-6014] Unused sequential element cnt_1s_en_reg was removed.  [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'KW4_change' (4#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Uart_led_show' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/Uart_led_show.v:23]
+INFO: [Synth 8-6157] synthesizing module 'filter' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KEY_1.v:1]
+	Parameter IDLE bound to: 4'b0001 
+	Parameter FILTER0 bound to: 4'b0010 
+	Parameter DOWN bound to: 4'b0100 
+	Parameter FILTER1 bound to: 4'b1000 
+	Parameter full_cnt bound to: 9'b110001111 
+INFO: [Synth 8-6155] done synthesizing module 'filter' (5#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KEY_1.v:1]
+WARNING: [Synth 8-6090] variable 'uart_data_count' is written by both blocking and non-blocking assignments, entire logic could be removed [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/Uart_led_show.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'Uart_led_show' (6#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/Uart_led_show.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'uart_data_count' does not match port width (2) of module 'Uart_led_show' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_top.v:97]
+INFO: [Synth 8-6157] synthesizing module 'vga_char_display' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/VGA_char_display.v:4]
+	Parameter UP_BOUND bound to: 31 - type: integer 
+	Parameter DOWN_BOUND bound to: 510 - type: integer 
+	Parameter LEFT_BOUND bound to: 144 - type: integer 
+	Parameter RIGHT_BOUND bound to: 783 - type: integer 
+	Parameter up_pos bound to: 43 - type: integer 
+	Parameter down_pos bound to: 50 - type: integer 
+	Parameter left_pos bound to: 155 - type: integer 
+	Parameter right_pos bound to: 210 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'RAM_set' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/RAM_set.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_set' (7#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/RAM_set.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'vga_char_display' (8#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/VGA_char_display.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'uart_top' (9#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 925.359 ; gain = 306.012
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 925.359 ; gain = 306.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 925.359 ; gain = 306.012
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 925.359 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/constrs_2/new/Tube_Uart_TOP.xdc]
+Finished Parsing XDC File [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/constrs_2/new/Tube_Uart_TOP.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/constrs_2/new/Tube_Uart_TOP.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/uart_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/uart_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1024.527 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1024.527 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1024.527 ; gain = 405.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1024.527 ; gain = 405.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1024.527 ; gain = 405.180
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'filter'
+INFO: [Synth 8-4471] merging register 'col6_reg[7:0]' into 'col0_reg[7:0]' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/RAM_set.v:27]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                 FILTER0 |                             0010 |                             0010
+                    DOWN |                             0100 |                             0100
+                 FILTER1 |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'filter'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1024.527 ; gain = 405.180
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 57    
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 4     
+	   8 Input      8 Bit        Muxes := 1     
+	  39 Input      7 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 5     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 8     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	  12 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module uart_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	  12 Input      1 Bit        Muxes := 1     
+Module uart_rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module decoder_3_8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+Module KW4_change 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+Module filter 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 6     
+Module Uart_led_show 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 3     
+Module RAM_set 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 6     
++---Muxes : 
+	  39 Input      7 Bit        Muxes := 1     
+Module vga_char_display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'vga_char_display_ints/u_ram_1/col0_reg[7:0]' into 'vga_char_display_ints/u_ram_0/col0_reg[7:0]' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/RAM_set.v:21]
+INFO: [Synth 8-4471] merging register 'vga_char_display_ints/u_ram_2/col0_reg[7:0]' into 'vga_char_display_ints/u_ram_0/col0_reg[7:0]' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/RAM_set.v:21]
+INFO: [Synth 8-4471] merging register 'vga_char_display_ints/u_ram_3/col0_reg[7:0]' into 'vga_char_display_ints/u_ram_0/col0_reg[7:0]' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/RAM_set.v:21]
+INFO: [Synth 8-4471] merging register 'vga_char_display_ints/u_ram_4/col0_reg[7:0]' into 'vga_char_display_ints/u_ram_0/col0_reg[7:0]' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/RAM_set.v:21]
+INFO: [Synth 8-4471] merging register 'vga_char_display_ints/u_ram_5/col0_reg[7:0]' into 'vga_char_display_ints/u_ram_0/col0_reg[7:0]' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/RAM_set.v:21]
+INFO: [Synth 8-4471] merging register 'vga_char_display_ints/u_ram_6/col0_reg[7:0]' into 'vga_char_display_ints/u_ram_0/col0_reg[7:0]' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/RAM_set.v:21]
+INFO: [Synth 8-4471] merging register 'vga_char_display_ints/u_ram_7/col0_reg[7:0]' into 'vga_char_display_ints/u_ram_0/col0_reg[7:0]' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/RAM_set.v:21]
+INFO: [Synth 8-3886] merging instance 'u_uart_rx/clk_cnt_reg[10]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_rx/clk_cnt_reg[11]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_rx/clk_cnt_reg[12]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_rx/clk_cnt_reg[13]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_rx/clk_cnt_reg[14]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_rx/clk_cnt_reg[15]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx_change/uart_data_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx_change/uart_data_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx_change/uart_data_reg[5]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx_change/uart_data_reg[4]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx_change/uart_data_reg[3]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx_change/uart_data_reg[2]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx_change/clk_cnt_reg[14]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx_change/clk_cnt_reg[15]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx_change/clk_cnt_reg[13]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx_change/clk_cnt_reg[12]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx_change/clk_cnt_reg[11]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx_change/clk_cnt_reg[10]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_5/col1_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_4/col5_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_4/col4_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_4/col3_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_4/col2_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_4/col1_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_3/col3_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_3/col2_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_3/col1_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_3/col5_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_3/col4_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_2/col5_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_2/col4_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_2/col3_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_2/col2_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_2/col1_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_1/col5_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_1/col4_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_1/col3_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_1/col2_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_1/col1_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_0/col5_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_0/col4_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_0/col3_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_0/col2_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_0/col1_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_7/col5_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_7/col4_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_5/col5_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_5/col4_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_5/col3_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_5/col2_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_6/col2_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_6/col1_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_7/col3_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_7/col2_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_7/col1_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_0/col0_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_6/col5_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_6/col4_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_6/col3_reg[7]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_5/col1_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_4/col5_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_4/col4_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_4/col3_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_4/col2_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_4/col1_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_3/col3_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_3/col2_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_3/col1_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_3/col5_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_3/col4_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_2/col5_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_2/col4_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_2/col3_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_2/col2_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_2/col1_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_1/col5_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_1/col4_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_1/col3_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_1/col2_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_1/col1_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_0/col5_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_0/col4_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_0/col3_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_0/col2_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_0/col1_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_7/col5_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_7/col4_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_5/col5_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_5/col4_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_5/col3_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_5/col2_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_6/col2_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_6/col1_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_7/col3_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_7/col2_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_7/col1_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_0/col0_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_6/col5_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_6/col4_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_char_display_ints/u_ram_6/col3_reg[6]' (FDC) to 'vga_char_display_ints/u_ram_0/col3_reg[3]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vga_char_display_ints/u_ram_6/col5_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\KW4_change_ints/seven_tube_seg_n_reg[7] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1024.527 ; gain = 405.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------------------------------+---------------+----------------+
+|Module Name | RTL Object                         | Depth x Width | Implemented As | 
++------------+------------------------------------+---------------+----------------+
+|RAM_set     | col1                               | 64x7          | LUT            | 
+|RAM_set     | col3                               | 64x7          | LUT            | 
+|RAM_set     | col4                               | 64x7          | LUT            | 
+|RAM_set     | col5                               | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_7/col5 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_7/col4 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_7/col3 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_7/col1 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_6/col5 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_6/col4 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_6/col3 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_6/col1 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_5/col5 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_5/col4 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_5/col3 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_5/col1 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_4/col5 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_4/col4 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_4/col3 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_4/col1 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_3/col5 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_3/col4 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_3/col3 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_3/col1 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_2/col5 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_2/col4 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_2/col3 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_2/col1 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_1/col5 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_1/col4 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_1/col3 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_1/col1 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_0/col5 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_0/col4 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_0/col3 | 64x7          | LUT            | 
+|uart_top    | vga_char_display_ints/u_ram_0/col1 | 64x7          | LUT            | 
++------------+------------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1024.527 ; gain = 405.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1024.527 ; gain = 405.180
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1033.227 ; gain = 413.879
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1038.852 ; gain = 419.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1038.852 ; gain = 419.504
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1038.852 ; gain = 419.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1038.852 ; gain = 419.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1038.852 ; gain = 419.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1038.852 ; gain = 419.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    10|
+|3     |LUT1   |    11|
+|4     |LUT2   |    76|
+|5     |LUT3   |    37|
+|6     |LUT4   |    54|
+|7     |LUT5   |    65|
+|8     |LUT6   |   107|
+|9     |MUXF7  |     4|
+|10    |FDCE   |   181|
+|11    |FDPE   |    12|
+|12    |IBUF   |     3|
+|13    |OBUF   |    27|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------+-----------------+------+
+|      |Instance                |Module           |Cells |
++------+------------------------+-----------------+------+
+|1     |top                     |                 |   588|
+|2     |  KW4_change_ints       |KW4_change       |    75|
+|3     |  Uart_led_show_ints    |Uart_led_show    |   135|
+|4     |    filter_up_ints      |filter           |    74|
+|5     |  u_uart_rx             |uart_rx          |    85|
+|6     |  u_uart_tx_change      |uart_tx          |    51|
+|7     |  vga_char_display_ints |vga_char_display |   211|
+|8     |    u_ram_0             |RAM_set          |    12|
+|9     |    u_ram_1             |RAM_set_0        |     5|
+|10    |    u_ram_2             |RAM_set_1        |    12|
+|11    |    u_ram_3             |RAM_set_2        |    14|
+|12    |    u_ram_4             |RAM_set_3        |     7|
+|13    |    u_ram_5             |RAM_set_4        |    10|
+|14    |    u_ram_6             |RAM_set_5        |    36|
+|15    |    u_ram_7             |RAM_set_6        |     9|
++------+------------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1038.852 ; gain = 419.504
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 1038.852 ; gain = 320.336
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1038.852 ; gain = 419.504
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1038.852 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1042.098 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+146 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 1042.098 ; gain = 735.656
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1042.098 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.runs/synth_1/uart_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file uart_top_utilization_synth.rpt -pb uart_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 10 20:56:54 2021...

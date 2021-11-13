@@ -1,0 +1,246 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Nov 10 20:54:39 2021
+# Process ID: 21788
+# Current directory: F:/FPGA/FPGA_practice_1/Digital_Tube_Uart
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18636 F:\FPGA\FPGA_practice_1\Digital_Tube_Uart\Digital_Tube_Uart.xpr
+# Log file: F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/vivado.log
+# Journal file: F:/FPGA/FPGA_practice_1/Digital_Tube_Uart\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado_2019_2_get/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Wed Nov 10 20:55:41 2021] Launched synth_1...
+Run output will be captured here: F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.runs/synth_1/runme.log
+[Wed Nov 10 20:55:41 2021] Launched impl_1...
+Run output will be captured here: F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 877.793 ; gain = 18.488
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+open_hw_target: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2081.699 ; gain = 1203.906
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a100t_0] -mem_dev [lindex [get_cfgmem_parts {28f00am29ew-bpi-x16}] 0]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: uart_top
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2644.266 ; gain = 240.926
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'uart_top' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_top.v:23]
+	Parameter UART_BPS bound to: 115200 - type: integer 
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_tx.v:1]
+	Parameter SYS_CLK_FRE bound to: 100000000 - type: integer 
+	Parameter BPS bound to: 115200 - type: integer 
+	Parameter BPS_CNT bound to: 868 - type: integer 
+INFO: [Synth 8-226] default block is never used [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_tx.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (1#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_tx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_rx.v:1]
+	Parameter BPS bound to: 115200 - type: integer 
+	Parameter SYS_CLK_FRE bound to: 100000000 - type: integer 
+	Parameter BPS_CNT bound to: 868 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (2#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_rx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'KW4_change' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:23]
+	Parameter T_1ms bound to: 99999 - type: integer 
+	Parameter T_500ms bound to: 49999999 - type: integer 
+	Parameter T_1s bound to: 99999999 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'decoder_3_8' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/decoder_3_8.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_3_8' (3#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/decoder_3_8.v:2]
+INFO: [Synth 8-226] default block is never used [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:117]
+INFO: [Synth 8-226] default block is never used [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:139]
+WARNING: [Synth 8-6014] Unused sequential element cnt_1s_reg was removed.  [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:73]
+WARNING: [Synth 8-6014] Unused sequential element Two_count_reg was removed.  [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:85]
+WARNING: [Synth 8-6014] Unused sequential element cnt_1s_en_reg was removed.  [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'KW4_change' (4#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Uart_led_show' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/Uart_led_show.v:23]
+INFO: [Synth 8-6157] synthesizing module 'filter' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KEY_1.v:1]
+	Parameter IDLE bound to: 4'b0001 
+	Parameter FILTER0 bound to: 4'b0010 
+	Parameter DOWN bound to: 4'b0100 
+	Parameter FILTER1 bound to: 4'b1000 
+	Parameter full_cnt bound to: 9'b110001111 
+INFO: [Synth 8-6155] done synthesizing module 'filter' (5#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/KEY_1.v:1]
+WARNING: [Synth 8-6090] variable 'uart_data_count' is written by both blocking and non-blocking assignments, entire logic could be removed [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/Uart_led_show.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'Uart_led_show' (6#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/Uart_led_show.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'uart_data_count' does not match port width (2) of module 'Uart_led_show' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_top.v:97]
+INFO: [Synth 8-6157] synthesizing module 'vga_char_display' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/VGA_char_display.v:4]
+	Parameter UP_BOUND bound to: 31 - type: integer 
+	Parameter DOWN_BOUND bound to: 510 - type: integer 
+	Parameter LEFT_BOUND bound to: 144 - type: integer 
+	Parameter RIGHT_BOUND bound to: 783 - type: integer 
+	Parameter up_pos bound to: 43 - type: integer 
+	Parameter down_pos bound to: 50 - type: integer 
+	Parameter left_pos bound to: 155 - type: integer 
+	Parameter right_pos bound to: 210 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'RAM_set' [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/RAM_set.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_set' (7#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/RAM_set.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'vga_char_display' (8#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/VGA_char_display.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'uart_top' (9#1) [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sources_1/new/uart_top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2696.266 ; gain = 292.926
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2714.168 ; gain = 310.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2714.168 ; gain = 310.828
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2714.168 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/constrs_2/new/Tube_Uart_TOP.xdc]
+Finished Parsing XDC File [F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/constrs_2/new/Tube_Uart_TOP.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2823.219 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:18 . Memory (MB): peak = 2871.859 ; gain = 468.520
+25 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:32 . Memory (MB): peak = 2871.859 ; gain = 708.355
+reset_run impl_1
+launch_runs impl_1 -jobs 16
+[Wed Nov 10 20:57:41 2021] Launched impl_1...
+Run output will be captured here: F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.runs/impl_1/runme.log
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2923.418 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 3478.219 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 3478.219 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3478.219 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:27 ; elapsed = 00:00:21 . Memory (MB): peak = 3575.352 ; gain = 667.000
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Wed Nov 10 21:01:38 2021] Launched impl_1...
+Run output will be captured here: F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.runs/impl_1/uart_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+ERROR: [Labtools 27-2312] Device xc7a100t_0 is no longer available.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target.
+Use open_hw_target to re-register the hardware device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.runs/impl_1/uart_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.runs/impl_1/uart_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.runs/impl_1/uart_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B0F033A
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 10 22:38:49 2021...

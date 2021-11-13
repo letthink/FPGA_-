@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Digital_Tube_Uart.srcs/sources_1/new/KEY_1.v" \
+"../../../../Digital_Tube_Uart.srcs/sources_1/new/KW4_change.v" \
+"../../../../Digital_Tube_Uart.srcs/sources_1/new/Uart_led_show.v" \
+"../../../../Digital_Tube_Uart.srcs/sources_1/new/decoder_3_8.v" \
+"../../../../Digital_Tube_Uart.srcs/sources_1/new/uart_rx.v" \
+"../../../../Digital_Tube_Uart.srcs/sources_1/new/uart_top.v" \
+"../../../../Digital_Tube_Uart.srcs/sources_1/new/uart_tx.v" \
+"../../../../Digital_Tube_Uart.srcs/sim_1/new/Uart_Data_1_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,3 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+$stop called at time : 353560 ns : File "F:/FPGA/FPGA_practice_1/Digital_Tube_Uart/Digital_Tube_Uart.srcs/sim_1/new/Uart_Data_1_tb.v" Line 141
